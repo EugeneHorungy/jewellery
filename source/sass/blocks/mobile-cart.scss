@@ -1,0 +1,24 @@
+.mobile-cart {
+  display: none;
+
+  @media (max-width: $max-tablet-width) {
+    display: block;
+    position: absolute;
+    top: 24px;
+    right: 44px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    top: 17px;
+    right: 14px;
+  }
+}
+
+.mobile-cart__icon {
+  fill: transparent;
+  stroke: $icon-color-black;
+
+  &--no-js {
+    stroke: $icon-color-white;
+  }
+}

@@ -1,0 +1,37 @@
+.page-body {
+  display: flex;
+  flex-direction: column;
+  font-family: $primary-font;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  grid-auto-flow: row;
+  min-width: 320px;
+  min-height: 4100px;
+  overflow-x: hidden;
+
+  @media (max-width: $max-tablet-width) {
+    min-height: 4145px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    min-height: 4842px;
+  }
+
+  &--menu-open {
+    overflow: hidden;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+}
+
+.page-body__main {
+  flex-grow: 1;
+}
+
+.page-body__footer {
+  margin-top: auto;
+}

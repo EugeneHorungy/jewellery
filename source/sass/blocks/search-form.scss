@@ -1,0 +1,124 @@
+.search-form {
+  display: flex;
+  align-items: center;
+
+  @media (max-width: $max-tablet-width) {
+    height: 40px;
+    background-color: $search-form-bg-color;
+    border-radius: 21px;
+  }
+}
+
+.search-form button {
+  width: 30px;
+  height: 30px;
+  border-bottom-left-radius:10px;
+  border-top-left-radius: 10px;
+  border: none;
+  background-color: transparent;
+  transition: all 0.3s;
+  cursor: pointer;
+
+  @media (max-width: $max-tablet-width) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    padding-left: 12px;
+    color: $icon-color-white;
+  }
+}
+
+.search-form .search-form__icon-search {
+  transition: all 0.3s;
+
+  @media (max-width: $max-tablet-width) {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.search-form button:hover svg {
+  transform: scale(120%);
+}
+
+.search-form button:focus {
+  outline: none;
+  border: 1px solid $accent-color;
+  border-bottom-right-radius:10px;
+  border-top-right-radius: 10px;
+}
+
+.search-form button:focus svg {
+  transform: scale(120%);
+}
+
+.search-form input {
+  height: 30px;
+  order: 1;
+  border-bottom-right-radius:10px;
+  border-top-right-radius: 10px;
+  border: none;
+  background-color: transparent;
+  transition: all 0.3s;
+
+  @media (max-width: $max-tablet-width) {
+    width: 100%;
+    min-height: 40px;
+  }
+}
+
+.search-form input:hover {
+  background-color: rgba($accent-color, 0.2);
+}
+
+.search-form input:focus {
+  outline: none;
+  border-top: 1px solid $accent-color;
+  border-right: 1px solid $accent-color;
+  border-bottom: 1px solid $accent-color;
+}
+
+.search-form input:focus + button {
+  border-top: 1px solid $accent-color;
+  border-left: 1px solid $accent-color;
+  border-bottom: 1px solid $accent-color;
+}
+
+.search-form input:hover + button {
+  background-color: rgba($accent-color, 0.2);
+}
+
+.search-form input::placeholder {
+  font-family: $primary-font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: $text-color-gray;
+
+  @media (max-width: $max-tablet-width) {
+    color: transparent;
+  }
+}
+
+.search-form input {
+  font-family: $primary-font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: $text-color-black;
+  padding-left: 7px;
+
+  @media (max-width: $max-tablet-width) {
+    color: $text-color-white;
+  }
+}
+
+.search-form--js {
+  @media (max-width: $max-tablet-width) {
+    display: none;
+  }
+}

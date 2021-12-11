@@ -1,0 +1,116 @@
+.header {
+  width: 100vw;
+  padding-top: 30px;
+  position: relative;
+
+  @media (max-width: $max-tablet-width) {
+    min-height: 126px;
+
+    &--open-menu {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      overflow-y: scroll;
+      background-color: $accent-color;
+    }
+
+    &--no-js {
+      background-color: $accent-color;
+    }
+  }
+
+  @media (max-width: $max-mobile-width) {
+    padding-top: 20px;
+    min-height: 92px;
+  }
+}
+
+.header--no-js .header__menu-button-icon {
+  stroke: transparent;
+}
+
+.header--open-menu .mobile-cart__icon {
+  stroke: $icon-color-white;
+}
+
+.header--open-menu .header__menu-button-icon {
+  stroke: $icon-color-white;
+}
+
+.header__wrapper {
+  position: relative;
+  display: grid;
+  grid-template-columns: min-content auto;
+  grid-template-rows: min-content min-content;
+  justify-content: space-between;
+  align-items: start;
+  margin: 0 auto;
+  padding: 0 50px;
+  max-width: 1286px;
+
+  @media (max-width: $max-tablet-width) {
+    grid-template-columns: 1fr;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    padding-left: 2px;
+    padding-right: 15px;
+  }
+}
+
+.header__form {
+  margin-top: 7px;
+
+  @media (max-width: $max-tablet-width) {
+    margin: 48px 12px 33px 12px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    margin-top: 31px;
+    margin-right: 0;
+    margin-bottom: 24px;
+  }
+}
+
+.header__logo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%);
+}
+
+.header__user-menu {
+  justify-self: end;
+
+  @media (max-width: $max-tablet-width) {
+    justify-self: start;
+  }
+}
+
+.header__nav {
+  grid-column: 1 / -1;
+  justify-self: center;
+  margin-top: 37px;
+
+  @media (max-width: $max-tablet-width) {
+    justify-self: start;
+    grid-row: 3 / 4;
+    margin-top: 0;
+    margin-bottom: 21px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    margin-bottom: 10px;
+  }
+}
+
+.header__menu-button {
+  margin-top: 8px;
+
+  @media (max-width: $max-mobile-width) {
+    margin-top: 1px;
+  }
+}

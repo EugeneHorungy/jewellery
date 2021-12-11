@@ -1,0 +1,107 @@
+.subscribe-form {
+  position: relative;
+  padding-right: 85px;
+
+  @media (max-width: $max-tablet-width) {
+    padding-right: 118px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    padding-right: 0;
+  }
+}
+
+.subscribe-form h2 {
+  font-family: $secondary-font;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 44px;
+  letter-spacing: 0.025em;
+  color: $text-color-white;
+  margin-top: 0;
+  margin-bottom: 8px;
+
+  @media (max-width: $max-mobile-width) {
+    padding-right: 50px;
+    margin-bottom: 13px;
+  }
+}
+
+.subscribe-form p {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 400;
+  color: $text-color-gray;
+  margin-top: 0;
+  margin-bottom: 29px;
+
+  @media (max-width: $max-mobile-width) {
+    padding-right: 50px;
+    margin-bottom: 27px;
+  }
+}
+
+.subscribe-form__input-wrapper {
+  display: flex;
+}
+
+.subscribe-form input {
+  flex-grow: 1;
+  font-size: 14px;
+  line-height: 21px;
+  font-style: normal;
+  font-weight: 500;
+  font-family: $primary-font;
+  color: $text-color-white;
+  padding: 15px 10px 10px 0;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid $subscribe-form-border-color;
+  transition: all 0.3s;
+
+  &:hover {
+    outline: 1px solid $subscribe-form-border-color;
+    border-radius: 4px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    padding-bottom: 9px;
+    width: 180px;
+  }
+}
+
+.subscribe-form input::placeholder {
+  font-size: 14px;
+  line-height: 21px;
+  font-style: normal;
+  font-weight: 500;
+  font-family: $primary-font;
+  color: $text-color-gray;
+}
+
+.subscribe-form button {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  color: $text-color-white;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid $subscribe-form-border-color;
+  padding-right: 0;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    outline: 1px solid $subscribe-form-border-color;
+    border-radius: 4px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    padding-top: 8px;
+  }
+}
+
+.subscribe-form__arrow {
+  transform: rotate(180deg);
+  margin-left: 10px;
+}

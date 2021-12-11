@@ -1,0 +1,28 @@
+.use-of-terms-list {
+  @include list-reset();
+
+  padding-top: 4px;
+  padding-right: 14px;
+  padding-left: 8px;
+
+  @media (max-width: $max-tablet-width) {
+    padding-left: 0;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    margin-bottom: 15px;
+  }
+}
+
+.use-of-terms-list__item {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  color: $text-color-white;
+  margin-bottom: 21px;
+}
+
+.use-of-terms-list__item a:hover {
+  border-radius: 5px;
+  box-shadow: inset 1px 1px 10px 1px #ffffff, 1px 1px 8px 3px #ffffff;
+}

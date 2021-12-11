@@ -1,0 +1,29 @@
+.about-store-list {
+  @include list-reset();
+
+  margin-left: auto;
+  margin-right: 44px;
+  padding-top: 4px;
+
+  @media (max-width: $max-tablet-width) {
+    margin-left: 72px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+}
+
+.about-store-list__item {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  color: $text-color-white;
+  margin-bottom: 21px;
+}
+
+.about-store-list__item a:hover {
+  border-radius: 5px;
+  box-shadow: inset 1px 1px 10px 1px #ffffff, 1px 1px 8px 3px #ffffff;
+}

@@ -1,0 +1,91 @@
+.promo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $accent-color;
+  min-height: 463px;
+  width: 100vw;
+
+  .webp & {
+    background-image: image-set(url("../img/promo/promo-bg-desktop.webp") 1x, url("../img/promo/promo-bg-desktop@2x.webp") 2x);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @media (max-width: $max-tablet-width) {
+      background-image: image-set(url("../img/promo/promo-bg-tablet.webp") 1x, url("../img/promo/promo-bg-tablet@2x.webp") 2x);
+    }
+
+    @media (max-width: $max-mobile-width) {
+      background-image: image-set(url("../img/promo/promo-bg-mobile.webp") 1x, url("../img/promo/promo-bg-mobile@2x.webp") 2x);
+    }
+  }
+
+  .no-webp & {
+    background-image: image-set(url("../img/promo/promo-bg-desktop.jpg") 1x, url("../img/promo/promo-bg-desktop@2x.jpg") 2x);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @media (max-width: $max-tablet-width) {
+      background-image: image-set(url("../img/promo/promo-bg-tablet.jpg") 1x, url("../img/promo/promo-bg-tablet@2x.jpg") 2x);
+    }
+
+    @media (max-width: $max-mobile-width) {
+      background-image: image-set(url("../img/promo/promo-bg-mobile.jpg") 1x, url("../img/promo/promo-bg-mobile@2x.jpg") 2x);
+    }
+  }
+}
+
+.promo__wpapper {
+  @include container-desktop();
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  @media (max-width: $max-tablet-width) {
+    padding-left: 30px;
+    padding-right: 50px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.promo h2 {
+  @include text-reset();
+
+  font-family: $secondary-font;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 45px;
+  letter-spacing: 0.03em;
+  color: $text-color-white;
+  margin-top: 5px;
+
+  @media (max-width: $max-mobile-width) {
+    font-size: 38px;
+    line-height: 38px;
+  }
+}
+
+.promo p {
+  @include text-reset();
+
+  font-family: $secondary-font;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 38px;
+  line-height: 49px;
+  color: $text-color-white;
+
+  @media (max-width: $max-mobile-width) {
+    font-size: 34px;
+    line-height: 44px;
+  }
+}

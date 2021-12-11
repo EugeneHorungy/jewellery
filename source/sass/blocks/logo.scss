@@ -1,0 +1,30 @@
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 66px;
+  border-radius: 10px;
+  transition: all 0.3s;
+  color: $accent-color;
+
+  &--no-js {
+    @media (max-width: $max-tablet-width) {
+      color: $text-color-white;
+    }
+  }
+
+  &--menu-open {
+    color: $text-color-white;
+  }
+}
+
+.logo__icon {
+  @media (max-width: $max-mobile-width) {
+    width: 52px;
+    height: 52px;
+  }
+}
+
+.logo:hover {
+  box-shadow: 0 0 0 2px $accent-color;
+}
