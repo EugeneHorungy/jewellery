@@ -103,7 +103,11 @@
     background-color: $accent-color;
   }
 
-
+  &:focus {
+    outline: none;
+    color: $text-color-white;
+    background-color: $accent-color;
+  }
 }
 
 .article__info a::after {

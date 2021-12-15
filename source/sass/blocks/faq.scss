@@ -76,13 +76,17 @@
 
 .faq__question {
   position: relative;
+  font-family: $primary-font;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
   padding-left: 42px;
   padding-right: 47px;
   min-height: 111px;
+  background-color: transparent;
   cursor: pointer;
+  border: none;
 
   @media (max-width: $max-tablet-width) {
     padding-left: 46px;
@@ -95,9 +99,40 @@
   }
 }
 
+.faq__question::before,
+.faq__question::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 100%;
+  background-color: rgba($accent-color, 0.8);
+  top: 0;
+  display: none;
+}
+
+.faq__question::before {
+  left: 0;
+}
+
+.faq__question::after {
+  right: 0;
+}
+
+.faq__question:hover span {
+  color: $accent-color;
+}
+
+.faq__question:focus {
+  outline: none;
+}
+
+.faq__question:focus::before,
+.faq__question:focus::after {
+  display: block;
+}
+
 .faq__question svg {
   transition: all 0.7s;
-  flex-grow: 1;
 
   @media (max-width: $max-tablet-width) {
     width: 26px;
@@ -115,13 +150,14 @@
   }
 }
 
-.faq__question h3 {
+.faq__question span {
   font-size: 18px;
   line-height: 23px;
   font-weight: 500;
   color: $text-color-black;
   margin-bottom: 0;
   margin-top: 0;
+  transition: all 0.3s;
 
   @media (max-width: $max-mobile-width) {
     font-size: 16px;
@@ -132,7 +168,7 @@
   }
 }
 
-.faq__question--last h3 {
+.faq__question--last span {
   padding-right: 30px;
 }
 
