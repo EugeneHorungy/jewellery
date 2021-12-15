@@ -12,17 +12,19 @@ const mobileCart = document.querySelector('.mobile-cart__icon');
 const slider = document.querySelector('.swiper');
 const noveltyCards = document.querySelectorAll('.novelty-card');
 const noveltiesControls = document.querySelectorAll('.novelties__controls');
+const accordeonSwitchers = document.querySelectorAll('.accordeon-switcher');
+const accordeons = document.querySelectorAll('.accordeon');
 
 if (noveltyCards) {
   noveltyCards.forEach((card) => {
     card.classList.remove('novelty-card--no-js');
-  })
+  });
 }
 
 if (noveltiesControls) {
   noveltiesControls.forEach((btn) => {
     btn.classList.remove('novelties__controls--no-js');
-  })
+  });
 }
 
 header.classList.remove('header--no-js');
@@ -52,7 +54,7 @@ menuBtn.addEventListener('click', (evt) => {
 
 if (slider) {
   const initSwiper = () => {
-    new Swiper('.swiper', {
+    const swiper = new Swiper('.swiper', {
       direction: 'horizontal',
       loop: false,
       observer: true,
@@ -105,18 +107,52 @@ if (slider) {
         }
       }
     });
-  }
+  };
 
   initSwiper();
 
   window.addEventListener('resize', () => {
     const swiperPagination = document.querySelector('.swiper-pagination');
     if (window.innerWidth < 768 && swiperPagination.firstElementChild.nodeName === 'BUTTON') {
-      console.log(`Screen width: ${window.innerWidth}`);
+      // console.log(`Screen width: ${window.innerWidth}`);
       initSwiper();
     } else if (window.innerWidth > 767 && swiperPagination.firstElementChild.nodeName === 'SPAN') {
-      console.log(`Screen width: ${window.innerWidth}`);
+      // console.log(`Screen width: ${window.innerWidth}`);
       initSwiper();
     }
   });
+}
+
+// Accordeon
+
+const removeSwitcherActiveClass = () => {
+  if (accordeonSwitchers) {
+    Array.from(accordeonSwitchers).forEach((item) => {
+      item.classList.remove('accordeon-switcher--active');
+    });
+  }
 };
+
+const removeAccordeonActiveClass = () => {
+  if (accordeons) {
+    Array.from(accordeons).forEach((item) => {
+      item.classList.remove('accordeon--active');
+    });
+  }
+};
+
+if (accordeonSwitchers) {
+  Array.from(accordeonSwitchers).forEach((item, i) => {
+    item.addEventListener('click', () => {
+      if (accordeonSwitchers[i].classList.contains('accordeon-switcher--active')) {
+        accordeonSwitchers[i].classList.remove('accordeon-switcher--active');
+        accordeons[i].classList.remove('accordeon--active');
+      } else {
+        removeSwitcherActiveClass();
+        removeAccordeonActiveClass();
+        accordeonSwitchers[i].classList.add('accordeon-switcher--active');
+        accordeons[i].classList.add('accordeon--active');
+      }
+    });
+  });
+}

@@ -7,16 +7,16 @@
   padding: 0;
   grid-auto-flow: row;
   min-width: 320px;
-  min-height: 4100px;
+  // min-height: 4100px;
   overflow-x: hidden;
 
-  @media (max-width: $max-tablet-width) {
-    min-height: 4145px;
-  }
+  // @media (max-width: $max-tablet-width) {
+  //   min-height: 4145px;
+  // }
 
-  @media (max-width: $max-mobile-width) {
-    min-height: 4842px;
-  }
+  // @media (max-width: $max-mobile-width) {
+  //   min-height: 4842px;
+  // }
 
   &--menu-open {
     overflow: hidden;
