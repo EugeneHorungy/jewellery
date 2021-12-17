@@ -1,0 +1,89 @@
+.catalog-tagline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $accent-color;
+  min-height: 261px;
+  width: 100vw;
+
+  &--no-js {
+    background-image: url("../img/catalog-tagline/catalog-tagline-bg-desktop.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @media (max-width: $max-tablet-width) {
+      background-image: url("../img/catalog-tagline/catalog-tagline-bg-tablet.jpg");
+    }
+
+    @media (max-width: $max-mobile-width) {
+      background-image: url("../img/catalog-tagline/catalog-tagline-bg-mobile.jpg");
+    }
+  }
+
+  .webp & {
+    background-image: image-set(url("../img/catalog-tagline/catalog-tagline-bg-desktop.webp") 1x, url("../img/catalog-tagline/catalog-tagline-bg-desktop@2x.webp") 2x);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @media (max-width: $max-tablet-width) {
+      background-image: image-set(url("../img/catalog-tagline/catalog-tagline-bg-tablet.webp") 1x, url("../img/catalog-tagline/catalog-tagline-bg-tablet@2x.webp") 2x);
+    }
+
+    @media (max-width: $max-mobile-width) {
+      background-image: image-set(url("../img/catalog-tagline/catalog-tagline-bg-mobile.webp") 1x, url("../img/catalog-tagline/catalog-tagline-bg-mobile@2x.webp") 2x);
+    }
+  }
+
+  .no-webp & {
+    background-image: image-set(url("../img/catalog-tagline/catalog-tagline-bg-desktop.jpg") 1x, url("../img/catalog-tagline/catalog-tagline-bg-desktop@2x.jpg") 2x);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @media (max-width: $max-tablet-width) {
+      background-image: image-set(url("../img/catalog-tagline/catalog-tagline-bg-tablet.jpg") 1x, url("../img/catalog-tagline/catalog-tagline-bg-tablet@2x.jpg") 2x);
+    }
+
+    @media (max-width: $max-mobile-width) {
+      background-image: image-set(url("../img/catalog-tagline/catalog-tagline-bg-mobile.jpg") 1x, url("../img/catalog-tagline/catalog-tagline-bg-mobile@2x.jpg") 2x);
+    }
+  }
+}
+
+.catalog-tagline__wpapper {
+  @include container-desktop();
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  @media (max-width: $max-mobile-width) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.catalog-tagline h2 {
+  @include text-reset();
+
+  font-family: $secondary-font;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 44px;
+  color: $text-color-white;
+}
+
+.catalog-tagline p {
+  @include text-reset();
+
+  font-family: $secondary-font;
+  font-weight: 500;
+  font-style: italic;
+  font-size: 22px;
+  line-height: 29px;
+  color: $text-color-white;
+}

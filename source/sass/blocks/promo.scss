@@ -6,6 +6,21 @@
   min-height: 463px;
   width: 100vw;
 
+  &--no-js {
+    background-image: url("../img/promo/promo-bg-desktop.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @media (max-width: $max-tablet-width) {
+      background-image: url("../img/promo/promo-bg-tablet.jpg");
+    }
+
+    @media (max-width: $max-mobile-width) {
+      background-image: url("../img/promo/promo-bg-mobile.jpg");
+    }
+  }
+
   .webp & {
     background-image: image-set(url("../img/promo/promo-bg-desktop.webp") 1x, url("../img/promo/promo-bg-desktop@2x.webp") 2x);
     background-size: cover;

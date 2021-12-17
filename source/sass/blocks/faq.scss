@@ -115,7 +115,7 @@
 }
 
 .faq__question::after {
-  right: 0;
+  right: -1px;
 }
 
 .faq__question:hover span {
@@ -128,7 +128,9 @@
 
 .faq__question:focus::before,
 .faq__question:focus::after {
-  display: block;
+  @media (min-width: $desktop-width-only) {
+    display: block;
+  }
 }
 
 .faq__question svg {

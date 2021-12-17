@@ -37,6 +37,10 @@
 //   }
 // }
 
+.accordeon-switcher.accordeon-switcher--active {
+  padding-bottom: 0;
+}
+
 .accordeon-switcher.accordeon-switcher--active svg {
   transform: rotate(180deg);
 }

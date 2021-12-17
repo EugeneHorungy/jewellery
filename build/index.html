@@ -4,9 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" as="style" href="./css/style.min.css">
+  <link rel="stylesheet" href="./css/style.min.css">
   <meta name="description" content="The best jewelry store for you.">
-  <title>Стартовый шаблон</title>
+  <title>Jewelry store</title>
 </head>
 <body class="page-body">
   <header class="page-body__header header header--no-js">
@@ -18,7 +19,7 @@
       </button>
       <form class="header__form search-form" action="https://echo.htmlacademy.ru" method="post">
         <label class="visually-hidden" for="search">Site search</label>
-        <input type="search" name="search" id="search" placeholder="Type here to search">
+        <input type="search" name="search" id="search" placeholder="Type here to search" required="">
         <button type="submit">
           <span class="visually-hidden">Click here to search</span>
           <svg class="search-form__icon-search" width="14" height="14">
@@ -64,16 +65,16 @@
             <a href="#">What’s new</a>
           </li>
           <li class="menu__item">
-            <a href="#">Chokers</a>
+            <a href="./catalog.html">Chokers</a>
           </li>
           <li class="menu__item">
-            <a href="#">Necklaces</a>
+            <a href="./catalog.html">Necklaces</a>
           </li>
           <li class="menu__item">
-            <a href="#">Rings</a>
+            <a href="./catalog.html">Rings</a>
           </li>
           <li class="menu__item">
-            <a href="#">Earrings</a>
+            <a href="./catalog.html">Earrings</a>
           </li>
         </ul>
       </nav>
@@ -82,7 +83,7 @@
 
   <main class="page-body__main main">
     <h1 class="visually-hidden">Jewelry store</h1>
-    <section class="promo">
+    <section class="promo promo--no-js">
       <div class="promo__wpapper">
         <h2>PERFECTION</h2>
         <p>made to be yours</p>
@@ -92,7 +93,7 @@
       <div class="novelties__wrapper">
         <div class="novelties__header">
           <h2>New In</h2>
-          <a href="#">Shop Now</a>
+          <a href="./catalog.html">Shop Now</a>
         </div>
         <div class="novelties__controls novelties__controls--no-js swiper-button-prev">
           <svg width="30" height="11">
@@ -439,7 +440,7 @@
         <h2>Frequently asked questions</h2>
         <ul class="faq__list">
           <li class="faq__item">
-            <button class="faq__question accordeon-switcher accordeon-switcher--active" tabindex="0">
+            <button class="faq__question accordeon-switcher accordeon-switcher--active">
               <span>What materials are the jewellery made of?</span>
               <svg class="faq__control-icon" width="17" height="10">
                 <use xlink:href="./img/sprite_auto.svg#icon-tick"></use>
@@ -450,35 +451,35 @@
             </div>
           </li>
           <li class="faq__item">
-            <button class="faq__question accordeon-switcher" tabindex="0">
+            <button class="faq__question accordeon-switcher accordeon-switcher--active">
               <span>Which countries do&nbsp;you deliver to?</span>
               <svg class="faq__control-icon" width="17" height="10">
                 <use xlink:href="./img/sprite_auto.svg#icon-tick"></use>
               </svg>
             </button>
-            <div class="faq__answer accordeon">
+            <div class="faq__answer accordeon accordeon--active">
               <p>Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals.</p>
             </div>
           </li>
           <li class="faq__item">
-            <button class="faq__question accordeon-switcher" tabindex="0">
+            <button class="faq__question accordeon-switcher accordeon-switcher--active">
               <span>What are the payment methods?</span>
               <svg class="faq__control-icon" width="17" height="10">
                 <use xlink:href="./img/sprite_auto.svg#icon-tick"></use>
               </svg>
             </button>
-            <div class="faq__answer accordeon">
+            <div class="faq__answer accordeon accordeon--active">
               <p>Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals.</p>
             </div>
           </li>
           <li class="faq__item">
-            <button class="faq__question faq__question--last accordeon-switcher" tabindex="0">
+            <button class="faq__question faq__question--last accordeon-switcher accordeon-switcher--active">
               <span>Can I return the <br>jewellery if it didn’t fit me?</span>
               <svg class="faq__control-icon" width="17" height="10">
                 <use xlink:href="./img/sprite_auto.svg#icon-tick"></use>
               </svg>
             </button>
-            <div class="faq__answer accordeon">
+            <div class="faq__answer accordeon accordeon--active">
               <p>Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals.</p>
             </div>
           </li>
@@ -583,7 +584,7 @@
         <p>News and updates from CH. No spam, we promise.</p>
         <div class="subscribe-form__input-wrapper">
           <label class="visually-hidden" for="e-mail">Enter your email</label>
-          <input type="email" name="e-mail" id="e-mail" placeholder="Your E-mail">
+          <input type="email" name="e-mail" id="e-mail" placeholder="Your E-mail" required="">
           <button>
             <span>Sign Up</span>
             <svg class="subscribe-form__arrow" width="30" height="11">

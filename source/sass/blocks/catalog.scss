@@ -1,0 +1,34 @@
+.catalog__wrapper {
+  @include container-desktop();
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: calc(30 / 1170 * 100%);
+  padding-top: 80px;
+  padding-bottom: 73px;
+
+  @media (max-width: $max-tablet-width) {
+    grid-template-columns: 1fr;
+    padding: 50px 45px 72px 45px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    padding: 40px 4.69vw 63px;
+  }
+}
+
+.catalog__list {
+  grid-column: 2 / -1;
+
+  @media (max-width: $max-tablet-width) {
+    grid-column: 1 / -1;
+  }
+}
+
+.catalog__controls {
+  grid-column: 2 / -1;
+
+  @media (max-width: $max-tablet-width) {
+    grid-column: 1 / -1;
+  }
+}
