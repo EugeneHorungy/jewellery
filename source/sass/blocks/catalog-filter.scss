@@ -55,7 +55,7 @@
       overflow-y: scroll;
       padding-top: 27px;
       padding-bottom: 88px;
-      background-color: #ffffff;
+      background-color: $white-bg-color;
 
       @media (max-width: $max-mobile-width) {
         padding: 60px 25px;
@@ -230,7 +230,9 @@
 }
 
 .filter__list-inputs-item input:focus + label {
-  box-shadow: 0 0 0 3px $accent-color;
+  @media (min-width: $desktop-width-only) {
+    box-shadow: 0 0 0 3px $accent-color;
+  }
 }
 
 .filter__list-inputs-price {

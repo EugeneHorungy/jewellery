@@ -1,0 +1,229 @@
+.login {
+  display: none;
+
+  &--no-js {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &--popup {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    min-height: 100vh;
+    overflow-y: scroll;
+    background-color: $white-bg-color;
+    z-index: 99;
+
+    @media (max-width: $max-mobile-width) {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+  }
+}
+
+.login__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $login-form-bg-color;
+  width: 430px;
+  padding: 160px 45px 40px 45px;
+  background-image: url("../img/login-form/login-form-bg-desktop.jpg");
+  background-repeat: no-repeat;
+  margin: 100px auto;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/login-form/login-form-bg-desktop@2x.jpg");
+  }
+
+  @media (max-width: $max-tablet-width) {
+    width: 442px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    background-image: url("../img/login-form/login-form-bg-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/login-form/login-form-bg-tablet@2x.jpg");
+    }
+  }
+
+  @media (max-width: $max-mobile-width) {
+    width: auto;
+    padding: 37% 15px 26px 15px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-image: url("../img/login-form/login-form-bg-mobile.jpg");
+    background-size: contain;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/login-form/login-form-bg-mobile@2x.jpg");
+    }
+  }
+
+  &--js {
+    margin: 100px auto;
+  }
+}
+
+.login__form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.login h2 {
+  font-family: $secondary-font;
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 44px;
+  color: $text-color-black;
+  margin-bottom: 24px;
+
+  @media (max-width: $max-mobile-width) {
+    font-size: 24px;
+    line-height: 31px;
+    margin-bottom: 20px;
+  }
+}
+
+.login__form input:not(:last-of-type) {
+  margin-bottom: 27px;
+
+  @media (max-width: $max-mobile-width) {
+    margin-bottom: 22px;
+  }
+}
+
+.login__form input::placeholder {
+  font-family: $primary-font;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 500;
+  color: $text-color-gray;
+}
+
+.login__form input {
+  font-family: $primary-font;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 500;
+  color: $text-color-black;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid $text-color-black;
+  padding-top: 8px;
+  padding-bottom: 8px;
+
+  &:hover {
+    outline: 1px solid $text-color-black;
+    outline-offset: -1px;
+  }
+}
+
+.login__form a {
+  display: block;
+  align-self: flex-end;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: $text-color-gray;
+  margin-top: 6px;
+  transition: all 0.3s;
+
+  &:hover {
+    color: $text-color-black;
+  }
+}
+
+.login__form button {
+  font-family: $primary-font;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 500;
+  text-align: center;
+  color: $text-color-white;
+  background-color: $accent-color;
+  padding: 23px;
+  margin-top: 45px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  @media (max-width: $max-mobile-width) {
+    margin-top: 35px;
+  }
+
+  &:hover {
+    background-color: rgba($accent-color, 0.9);
+  }
+}
+
+.login__bottom p {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 500;
+  color: $text-color-gray;
+}
+
+.login__bottom a {
+  color: $text-color-black;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.login__btn-close {
+  display: none;
+
+  &--js {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7px;
+    top: 10px;
+    right: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    @media (max-width: $max-tablet-width) {
+      top: 13px;
+      right: 13px;
+    }
+
+    @media (max-width: $max-tablet-width) {
+      top: 8px;
+      right: 8px;
+    }
+  }
+
+  &:hover {
+    background-color: rgba($accent-color, 0.8);
+  }
+}
+
+.login__btn-close svg {
+  @media (max-width: $max-tablet-width) {
+    width: 20px;
+    height: 20px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    width: 14px;
+    height: 14px;
+  }
+}
