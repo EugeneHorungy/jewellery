@@ -105,6 +105,7 @@
   font-size: 14px;
   line-height: 21px;
   color: $text-color-gray;
+  overflow: visible;
 
   @media (max-width: $max-tablet-width) {
     color: transparent;
