@@ -436,6 +436,10 @@
   fill: none;
 }
 
+.filter__btn-close-icon {
+  color: $icon-color-white;
+}
+
 .filter__form-wrapper--popup .filter__btn-close {
   @media (max-width: $max-tablet-width) {
     display: flex;
