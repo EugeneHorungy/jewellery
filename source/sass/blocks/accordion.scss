@@ -6,37 +6,6 @@
   display: block;
 }
 
-// .accordeon-switcher {
-//   @media (max-width: $max-mobile-width) {
-//     position: relative;
-
-//     &::before {
-//       display: block;
-//       position: absolute;
-//       content: "";
-//       width: 16px;
-//       height: 1px;
-//       right: 16px;
-//       top: 50%;
-//       bottom: 0;
-//       // background-color: $toggle-accordeon-color;
-//     }
-
-//     &::after {
-//       display: block;
-//       position: absolute;
-//       content: "";
-//       width: 16px;
-//       height: 1px;
-//       right: 16;
-//       top: 50%;
-//       bottom: 0;
-//       // background-color: $toggle-accordeon-color;
-//       transform: rotate(90deg) translateY(-0.1px);
-//     }
-//   }
-// }
-
 .accordeon-switcher.accordeon-switcher--active {
   padding-bottom: 0;
 }

@@ -30,7 +30,7 @@
   list-style: none;
   padding: 0;
   /* Fix of Webkit flickering */
-  z-index: 1;//    aaaaaaaaaaaaaa///////////////////////////////////////////////////////////////////////////
+  z-index: 1;
 }
 
 .swiper-vertical > .swiper-wrapper {
@@ -41,7 +41,7 @@
   position: relative;
   width: 100%;
   height: 100%;
-  z-index: 1;//   //////////////////////////////////////////////////////////////////////////////////////////
+  z-index: 1;
   display: flex;
   transition-property: transform;
   box-sizing: content-box;
@@ -207,17 +207,10 @@
   height: var(--swiper-virtual-size);
 }
 
-// :root {
-//   --swiper-navigation-size: 44px;
-// }
-
 .swiper-button-prev,
 .swiper-button-next {
   position: absolute;
-  // top: 50%;
   top: 177px;
-  // width: calc(var(--swiper-navigation-size) / 44 * 27);
-  // height: var(--swiper-navigation-size);
   border-radius: 4px;
   width: 30px;
   height: 30px;
@@ -227,7 +220,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  // color: var(--swiper-navigation-color, var(--swiper-theme-color));
   color: $accent-color;
   transition: all 0.3s;
 
@@ -236,8 +228,6 @@
   }
 
   @media (max-width: $max-tablet-width) {
-    // width: 60px;
-    // height: 22px;
     width: 36px;
     height: 36px;
     top: 124px;
@@ -251,8 +241,6 @@
 .swiper-button-prev svg,
 .swiper-button-next svg {
   @media (max-width: $max-tablet-width) {
-    // width: 60px;
-    // height: 22px;
     width: 36px;
     height: 15px;
   }
@@ -265,20 +253,8 @@
   pointer-events: none;
 }
 
-// .swiper-button-prev::after,
-// .swiper-button-next::after {
-//   font-family: "swiper-icons";// /////////////////// Убрал после теста ...................//////////
-//   font-size: var(--swiper-navigation-size);
-//   text-transform: none !important;
-//   letter-spacing: 0;
-//   text-transform: none;
-//   font-variant: initial;
-//   line-height: 1;
-// }
-
 .swiper-button-prev,
 .swiper-rtl .swiper-button-next {
-  // left: 10px;
   left: 50px;
   right: auto;
 
@@ -305,7 +281,6 @@
 
 .swiper-button-next::after,
 .swiper-rtl .swiper-button-prev::after {
-  // content: 'next';
   content: "";
 }
 
@@ -383,11 +358,8 @@
 }
 
 .swiper-pagination-bullet {
-  // width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 8px));
-  // height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 8px));
   display: inline-block;
   border-radius: 50%;
-  // background: var(--swiper-pagination-bullet-inactive-color, #000);
   background: transparent;
   opacity: var(--swiper-pagination-bullet-inactive-opacity, 0.2);
   font-weight: 500;
@@ -406,27 +378,16 @@ button.swiper-pagination-bullet {
   margin: 0;
   padding: 0;
   box-shadow: none;
-  // -webkit-appearance: none;   //////////////////// Убрал после теста. Проверить на ios
   appearance: none;
 }
 
 .swiper-pagination-clickable .swiper-pagination-bullet {
   cursor: pointer;
-
-  // &:hover {
-  //   outline: 1px solid $accent-color;
-  //   // box-shadow: 0 0 0 2px $accent-color;
-  // }
 }
-
-// .swiper-pagination-bullet:only-child {/////////////////////////////////Убрал после теста. ПРОВЕРИТЬ!!!!!! ///
-//   display: none !important;
-// }
 
 .swiper-pagination-bullet-active {
   opacity: var(--swiper-pagination-bullet-opacity, 1);
   pointer-events: none;
-  // background: var(--swiper-pagination-color, var(--swiper-theme-color));
 }
 
 .swiper-vertical > .swiper-pagination-bullets,

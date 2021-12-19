@@ -4,13 +4,16 @@
   padding-top: 4px;
   padding-right: 14px;
   padding-left: 8px;
+  max-width: 192px;
 
   @media (max-width: $max-tablet-width) {
     padding-left: 0;
+    max-width: 30%;
   }
 
   @media (max-width: $max-mobile-width) {
     margin-bottom: 15px;
+    max-width: 100%;
   }
 }
 
@@ -20,6 +23,10 @@
   font-weight: 500;
   color: $text-color-white;
   margin-bottom: 21px;
+}
+
+.use-of-terms-list a {
+  transition: all 0.3s;
 }
 
 .use-of-terms-list__item a:hover {

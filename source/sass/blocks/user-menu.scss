@@ -43,6 +43,7 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 21px;
+  color: $text-color-black;
   padding: 12px 5px;
   border-radius: 5px;
   transition: all 0.3s;
@@ -64,6 +65,11 @@
   outline: none;
   background-color: $accent-color;
   color: $text-color-white;
+}
+
+.user-menu__item.user-menu__item--login-page a:hover {
+  color: $text-color-black;
+  background-color: transparent;
 }
 
 .user-menu--js {

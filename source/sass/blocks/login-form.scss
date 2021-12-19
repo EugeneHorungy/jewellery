@@ -5,6 +5,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media (max-width: $max-mobile-width) {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
   }
 
   &--popup {
@@ -57,7 +62,8 @@
   }
 
   @media (max-width: $max-mobile-width) {
-    width: auto;
+    width: 100%;
+    max-width: 442px;
     padding: 37% 15px 26px 15px;
     margin-top: 50px;
     margin-bottom: 50px;

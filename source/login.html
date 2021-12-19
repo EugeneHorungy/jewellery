@@ -10,7 +10,12 @@
   <link rel="preload" href="./fonts/poppins-medium.woff" as="font" type="font/woff" crossorigin="anonymous">
   <link rel="preload" as="style" href="./css/style.min.css">
   <link rel="stylesheet" href="./css/style.min.css">
-  <meta name="description" content="The best jewelry store for you.">
+  <link rel="icon" href="./favicon.ico">
+  <link rel="icon" href="./img/favicon/favicon-logo.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
+  <meta name="description" content="Jewelry store login page.">
   <title>Jewelry store</title>
 </head>
 <body class="page-body">
@@ -31,7 +36,7 @@
           </svg>
         </button>
       </form>
-      <a href="./index.html" class="header__logo logo logo--no-js">
+      <a href="./main.html" class="header__logo logo logo--no-js logo--no-main-page" aria-label="Logo">
         <svg class="logo__icon" width="66" height="66">
           <use xlink:href="./img/sprite_auto.svg#icon-logo"></use>
         </svg>
@@ -47,14 +52,14 @@
           <a href="#">Contact Us</a>
         </li>
       </ul>
-      <a href="#" class="header__mobile-cart mobile-cart">
+      <a href="#" class="header__mobile-cart mobile-cart" aria-label="Cart">
         <svg class="mobile-cart__icon mobile-cart__icon--no-js" width="20" height="18">
           <use xlink:href="./img/sprite_auto.svg#icon-cart"></use>
         </svg>
       </a>
       <ul class="header__user-menu user-menu">
-        <li class="user-menu__item">
-          <a href="#">Login</a>
+        <li class="user-menu__item user-menu__item--login-page">
+          <a>Login</a>
         </li>
         <li class="user-menu__item user-menu__item--cart">
           <a href="#">
@@ -86,6 +91,7 @@
   </header>
 
   <main class="page-body__main main">
+    <h1 class="visually-hidden">Jewelry store login page</h1>
     <section class="login login--no-js">
       <div class="login__wrapper">
         <h2>Log In</h2>
@@ -100,11 +106,6 @@
             <a href="#">Sign up</a>
           </p>
         </div>
-        <button class="login__btn-close" type="button" aria-label="Close login form">
-          <svg class="login__btn-close-icon" width="14" height="14">
-            <use xlink:href="./img/sprite_auto.svg#icon-cross"></use>
-          </svg>
-        </button>
       </div>
     </section>
   </main>
@@ -114,7 +115,6 @@
         <h2>The good stuff in your inbox</h2>
         <p>News and updates from CH. No spam, we promise.</p>
         <div class="subscribe-form__input-wrapper">
-          <!-- <label class="visually-hidden" for="e-mail">Enter your email</label> -->
           <input type="email" name="e-mail" placeholder="Your E-mail" required>
           <button>
             <span>Sign Up</span>
@@ -154,7 +154,7 @@
       </ul>
       <ul class="footer__socials-list socials-list">
         <li class="socials-list__item">
-          <a class="socials-list__link" href="#">
+          <a class="socials-list__link" href="#" aria-label="Facebook">
             <div class="socials-list__icon socials-list__icon--facebook">
               <svg width="8" height="15">
                 <use xlink:href="./img/sprite_auto.svg#icon-facebook"></use>
@@ -164,7 +164,7 @@
           </a>
         </li>
         <li class="socials-list__item">
-          <a class="socials-list__link" href="#">
+          <a class="socials-list__link" href="#" aria-label="Instagram">
             <div class="socials-list__icon socials-list__icon--instagram">
               <svg width="15" height="15">
                 <use xlink:href="./img/sprite_auto.svg#icon-instagram"></use>
@@ -174,7 +174,7 @@
           </a>
         </li>
         <li class="socials-list__item">
-          <a class="socials-list__link" href="#">
+          <a class="socials-list__link" href="#" aria-label="Pinterest">
             <div class="socials-list__icon socials-list__icon--pinterest">
               <svg width="16" height="15">
                 <use xlink:href="./img/sprite_auto.svg#icon-pinterest"></use>
@@ -184,7 +184,7 @@
           </a>
         </li>
         <li class="socials-list__item">
-          <a class="socials-list__link" href="#">
+          <a class="socials-list__link" href="#" aria-label="Twitter">
             <div class="socials-list__icon socials-list__icon--twitter">
               <svg width="15" height="13">
                 <use xlink:href="./img/sprite_auto.svg#icon-twitter"></use>
@@ -197,7 +197,6 @@
     </div>
   </footer>
 
-  <script src="./js/vendor.js"></script>
   <script src="./js/script.js"></script>
 </body>
 </html>

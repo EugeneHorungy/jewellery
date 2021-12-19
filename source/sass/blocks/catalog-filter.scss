@@ -432,6 +432,10 @@
   }
 }
 
+.filter__fieldset-btn-icon {
+  fill: none;
+}
+
 .filter__form-wrapper--popup .filter__btn-close {
   @media (max-width: $max-tablet-width) {
     display: flex;
