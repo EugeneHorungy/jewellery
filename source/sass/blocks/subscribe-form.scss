@@ -43,9 +43,11 @@
 
 .subscribe-form__input-wrapper {
   display: flex;
+  border-bottom: 1px solid $subscribe-form-border-color;
 }
 
-.subscribe-form input {
+.subscribe-form input[type="email"] {
+  appearance: none;
   flex-grow: 1;
   font-size: 14px;
   line-height: 21px;
@@ -54,13 +56,14 @@
   font-family: $primary-font;
   color: $text-color-white;
   padding: 15px 10px 10px 0;
+  margin-right: 0;
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid $subscribe-form-border-color;
   transition: all 0.3s;
 
   &:hover {
     outline: 1px solid $subscribe-form-border-color;
+    outline-offset: -1px;
     border-radius: 4px;
   }
 
@@ -87,13 +90,13 @@
   color: $text-color-white;
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid $subscribe-form-border-color;
   padding-right: 0;
   cursor: pointer;
   transition: all 0.3s;
 
   &:hover {
     outline: 1px solid $subscribe-form-border-color;
+    outline-offset: -1px;
     border-radius: 4px;
   }
 

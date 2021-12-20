@@ -64,7 +64,7 @@
   @media (max-width: $max-mobile-width) {
     width: 100%;
     max-width: 442px;
-    padding: 37% 15px 26px 15px;
+    padding: clamp(100px, 37%, 166px) 15px 26px 15px;
     margin-top: 50px;
     margin-bottom: 50px;
     background-image: url("../img/login-form/login-form-bg-mobile.jpg");
