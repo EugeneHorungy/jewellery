@@ -95,8 +95,10 @@
       <div class="login__wrapper">
         <h2>Log In</h2>
         <form class="login__form" action="https://echo.htmlacademy.ru" method="post">
+          <label class="visually-hidden" for="e-mail">Enter your e-mail</label>
           <input type="email" name="e-mail" id="e-mail" placeholder="Your E-mail" required="">
-          <input type="password" name="password" placeholder="Password" required="">
+          <label class="visually-hidden" for="password">Enter your password</label>
+          <input type="password" name="password" id="password" placeholder="Password" required="">
           <a href="#">Forgot your password?</a>
           <button type="submit">Log In</button>
         </form>
@@ -114,7 +116,8 @@
         <h2>The good stuff in your inbox</h2>
         <p>News and updates from CH. No spam, we promise.</p>
         <div class="subscribe-form__input-wrapper">
-          <input type="email" name="e-mail" placeholder="Your E-mail" required="">
+          <label class="visually-hidden" for="subscribe-form-email">Enter your email to subscribe</label>
+          <input type="email" name="e-mail" id="subscribe-form-email" placeholder="Your E-mail" required="">
           <button>
             <span>Sign Up</span>
             <svg class="subscribe-form__arrow" width="30" height="11">
