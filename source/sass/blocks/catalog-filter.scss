@@ -148,39 +148,9 @@
   }
 }
 
-.filter__fieldset button::before,
-.filter__fieldset button::after {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 68px;
-  background-color: rgba($accent-color, 0.8);
-  top: -1px;
-  display: none;
-}
-
-.filter__fieldset button::before {
-  left: 0;
-}
-
-.filter__fieldset button::after {
-  right: -1px;
-}
-
 .filter__fieldset button:hover,
 .filter__fieldset button:focus {
   color: $accent-color;
-}
-
-.filter__fieldset button:focus {
-  outline: none;
-}
-
-.filter__fieldset button:focus::before,
-.filter__fieldset button:focus::after {
-  @media (min-width: $desktop-width-only) {
-    display: block;
-  }
 }
 
 .filter__list-inputs-item label {
