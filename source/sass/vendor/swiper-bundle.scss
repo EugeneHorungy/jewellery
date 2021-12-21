@@ -359,6 +359,7 @@
 
 .swiper-pagination-bullet {
   display: inline-block;
+  vertical-align: middle;
   border-radius: 50%;
   background: transparent;
   opacity: var(--swiper-pagination-bullet-inactive-opacity, 0.2);
@@ -413,6 +414,7 @@ button.swiper-pagination-bullet {
 .swiper-vertical > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet,
 .swiper-pagination-vertical.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
   display: inline-block;
+  vertical-align: middle;
   transition: 200ms transform, 200ms top;
 }
 
