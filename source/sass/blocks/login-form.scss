@@ -42,6 +42,7 @@
   padding: 160px 45px 40px 45px;
   background-image: url("../img/login-form/login-form-bg-desktop.jpg");
   background-repeat: no-repeat;
+  background-size: contain;
   margin: 100px auto;
 
   @media (min-resolution: 2dppx) {
@@ -118,7 +119,9 @@
   overflow: visible;
 }
 
-.login__form input {
+.login__form input[type="email"],
+.login__form input[type="password"] {
+  appearance: none;
   font-family: $primary-font;
   font-size: 14px;
   line-height: 21px;
@@ -212,7 +215,7 @@
       right: 13px;
     }
 
-    @media (max-width: $max-tablet-width) {
+    @media (max-width: $max-mobile-width) {
       top: 8px;
       right: 8px;
     }
