@@ -130,12 +130,15 @@
   background-color: transparent;
   border: none;
   border-bottom: 1px solid $text-color-black;
+  border-radius: 0;
   padding-top: 8px;
   padding-bottom: 8px;
 
-  &:hover {
-    outline: 1px solid $text-color-black;
-    outline-offset: -1px;
+  @media (min-width: $desktop-width-only) {
+    &:hover {
+      outline: 1px solid $text-color-black;
+      outline-offset: -1px;
+    }
   }
 }
 
