@@ -376,4 +376,12 @@
       }
     });
   }
+
+  var share = Ya.share2('my-share', {
+    content: {
+      url: 'https://yandex.com'
+    }
+    // здесь вы можете указать и другие параметры
+  });
+  share();
 }());
